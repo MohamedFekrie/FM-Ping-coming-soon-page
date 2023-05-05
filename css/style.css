@@ -1,0 +1,209 @@
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+* {
+    font-family: 'Libre Franklin', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    width: 70%;
+    height: 100vh;
+    text-align: center;
+    padding: 60px 15px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img {
+    margin-bottom: 50px;
+}
+
+@media(max-width: 767px) {
+    .logo img {
+        margin-bottom: 40px;
+    }
+}
+
+.text-content h1 {
+    color: var(--gray);
+    font-size: 40px;
+    font-weight: 300;
+    margin: 0;
+}
+
+@media(max-width: 767px) {
+    .text-content h1 {
+        font-size: 35px;
+    }
+}
+
+.text-content h1 span {
+    color: #000;
+    font-weight: 800;
+}
+
+.text-content p {
+    margin: 30px;
+    font-size: 18px;
+}
+
+@media(max-width: 767px) {
+    .text-content p {
+        font-size: 16px;
+    }
+}
+
+.container form {
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container form div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container form div p {
+    padding-left: 22px;
+    color: var(--light-red);
+    display: none;
+}
+
+.container form div p.on {
+    display: block;
+}
+
+.container input[type="email"] {
+    position: relative;
+    border: 2px solid hsl(223, 100%, 93%);
+    outline: none;
+    border-radius: 35px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    width: 430px;
+    height: 50px;
+    transition: .3s;
+}
+
+::placeholder {
+    opacity: .5;
+}
+
+.container input[type="email"]::after {
+    content: 'Please provide a valid email address';
+    position: absolute;
+}
+
+.container input[type="email"]:focus {
+    border: 2px solid var(--pale-blue);
+}
+
+.container input[type="submit"] {
+    align-self: baseline;
+    border: none;
+    outline: none;
+    background-color: var(--blue);
+    color: #fff;
+    height: 50px;
+    border-radius: 35px;
+    padding: 0 50px;
+    font-weight: 600;
+    box-shadow: 4px 4px 10px var(--pale-blue);
+    cursor: pointer;
+    transition: .3s;
+    margin-left: 30px;
+}
+
+.container input[type="submit"]:hover {
+    background-color: hsl(223, 87%, 71%)
+}
+
+@media(max-width: 767px) {
+    .container form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container form input,
+    .container form div {
+        width: 100% !important;
+    }
+
+    .container input[type="submit"] {
+        margin-left: 0;
+        margin-top: 6px;
+    }
+}
+
+.container .main-img {
+    width: 100%;
+}
+
+.container .main-img img {
+    width: 640px;
+    max-width: 90%;
+}
+
+.social-icon {}
+
+@media(max-width: 767px) {
+    .social-icon {
+        margin-top: 80px;
+    }
+}
+
+.social-icon a {
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--pale-blue);
+    border-radius: 50%;
+    color: var(--blue);
+    margin: 20px 2px;
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.social-icon a:hover {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    color: #fff;
+}
+
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
